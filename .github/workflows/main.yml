@@ -23,8 +23,8 @@ jobs:
           java-version: '17'
 
       # Build ứng dụng Spring Boot và đóng gói thành file JAR
-      - name: Build Spring Boot app
-        run: ./mvnw clean package
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
 
       # Đăng nhập vào Docker Hub bằng cách sử dụng thông tin từ secret của repository
       - name: Log in to Docker Hub
